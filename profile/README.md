@@ -4,6 +4,16 @@
 
 Каждая дисциплина хранится в отдельном предметном репозитории. Внутри занятий сохраняются исходные материалы (`sources/`) и общий актуальный конспект (`notes.md`).
 
+## Служебные репозитории
+
+<!-- Этот блок статичен и обновляется вручную; scheduled catalog-sync его не изменяет. -->
+
+- [`inbox`](https://github.com/rosbiotech-studies/inbox) — входящие учебные материалы для последующей обработки и маршрутизации.
+- [`inbox-bot`](https://github.com/rosbiotech-studies/inbox-bot) — Telegram-сервис для быстрой отправки материалов в `inbox`.
+- [`automation`](https://github.com/rosbiotech-studies/automation) — общие правила, production-сценарии, CI и валидаторы организации.
+- [`subject-template`](https://github.com/rosbiotech-studies/subject-template) — шаблон для создания нового предметного репозитория.
+- [`.github`](https://github.com/rosbiotech-studies/.github) — навигация организации и актуальный академический контекст.
+
 ## Как пользоваться
 
 - **Найти материалы** — откройте репозиторий нужной дисциплины.
