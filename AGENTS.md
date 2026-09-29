@@ -27,4 +27,3 @@
 - **Численные методы** → [`numerical-methods`](https://github.com/rosbiotech-studies/numerical-methods) — `2026-2027 / семестр 5`
 <!-- SUBJECTS:END -->
 
-Все пользовательские и учебные материалы организации ведутся на русском языке.
