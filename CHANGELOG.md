@@ -52,7 +52,7 @@
 
 В тот же день реальные smoke/retry сценарии deterministic Source Mover нашли дефект с кириллическими путями Git. Проверка была исправлена на lossless NUL-delimited path handling, после чего Unicode payload успешно прошёл повторный transfer.
 
-[Техническая история — automation#25 и #28](https://github.com/rosbiotech-studies/automation/pulls?q=is%3Apr+is%3Aclosed+25+28)
+[Техническая история — automation#25](https://github.com/rosbiotech-studies/automation/pull/25) · [automation#28](https://github.com/rosbiotech-studies/automation/pull/28)
 
 ---
 
