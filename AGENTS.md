@@ -8,6 +8,7 @@
 - Если дисциплина/занятие не указаны явно и target может зависеть от текущего семестра, времени или расписания — сначала прочитай [`current.yml`](current.yml), затем применяй canonical organization/entity-resolution policy из `automation@v1`. Актуальные year/semester/group берутся из `current.yml`, а не из предметного repository.
 - Не исследуй остальные репозитории без необходимости.
 - Если задача относится к устройству организации, общим правилам или фоновой синхронизации — начни с `automation`.
+- Если нужна история значимых обновлений самой организации — смотри [`CHANGELOG.md`](CHANGELOG.md); правила ведения этой истории принадлежат `automation@v1/policy/ORGANIZATION_STANDARD.md`.
 
 `current.yml` содержит только актуальный academic context и не является набором правил. Служебные repository roles, metadata semantics и правила current-context resolution определяются canonical policy в [`automation@v1`](https://github.com/rosbiotech-studies/automation/tree/v1/policy).
 
