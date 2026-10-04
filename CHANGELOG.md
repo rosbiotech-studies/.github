@@ -26,11 +26,11 @@ Guide не задаёт универсальный шаблон лекции, п
 
 В `automation` появился детерминированный resolver: он читает canonical название группы, получает актуальный `groupID` через `/api/Groups`, затем запрашивает `/api/Rasp` и fail-closed проверяет структуру и identity ответа. Реальный GitHub Actions smoke подтвердил цепочку `24о-090301-ИИ/1 → 18495 → 256 строк расписания`.
 
-Проверенный snapshot теперь материализуется по расписанию в derived-ветку `automation:schedule-cache`. ChatGPT и другие исполнители сначала используют свежий GitHub cache; direct HTTP остаётся fallback, а ручной JSON — последним аварийным вариантом. Provider-specific ID по-прежнему не является canonical metadata и не сохраняется в `current.yml`.
+GitHub Actions теперь является основным transport-слоем расписания. Если свежий verified cache точно подходит запросу, используется materialized snapshot из `automation:schedule-cache`; для другой группы или диапазона используется постоянный Git-native on-demand path через служебную ветку `schedule-query`. SHA request-коммита однозначно связывает запрос с verified result. Direct HTTP текущего исполнителя сохранён только как менее надёжный fallback, ручной JSON — как последний аварийный вариант; web/browser search расписанием не считается. End-to-end rollout on-demand path независимо подтвердил `24о-090301-ИИ/2 → 18496 → 17 строк` на неделе с 5 октября 2026. Provider-specific ID по-прежнему не является canonical metadata и не сохраняется в `current.yml`.
 
-Первоначальный cross-repository caller из публичного `.github` был отклонён burn-in тестом из-за visibility boundary GitHub Actions; production materialization поэтому полностью размещена внутри приватного `automation`.
+Первоначальный cross-repository caller из публичного `.github` был отклонён burn-in тестом из-за visibility boundary GitHub Actions; production materialization и on-demand query поэтому полностью размещены внутри приватного `automation`.
 
-[Техническая история — automation#38](https://github.com/rosbiotech-studies/automation/pull/38) · [automation#39](https://github.com/rosbiotech-studies/automation/pull/39)
+[Техническая история — automation#38](https://github.com/rosbiotech-studies/automation/pull/38) · [automation#39](https://github.com/rosbiotech-studies/automation/pull/39) · [automation#41](https://github.com/rosbiotech-studies/automation/pull/41)
 
 ---
 
