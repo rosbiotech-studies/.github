@@ -30,7 +30,9 @@ GitHub Actions теперь является основным transport-слое
 
 Первоначальный cross-repository caller из публичного `.github` был отклонён burn-in тестом из-за visibility boundary GitHub Actions; production materialization и on-demand query поэтому полностью размещены внутри приватного `automation`.
 
-[Техническая история — automation#38](https://github.com/rosbiotech-studies/automation/pull/38) · [automation#39](https://github.com/rosbiotech-studies/automation/pull/39) · [automation#41](https://github.com/rosbiotech-studies/automation/pull/41)
+Provider discipline теперь также имеет проверенный deterministic mapping основных типов занятий: `лек → lecture`, `пр → practice`, `лаб → laboratory`; subgroup suffix вида `, п/г N` удаляется только для subject matching. Live smoke подтвердил mapping на всех 256 строках текущего полного расписания. На этой основе semester-5 `class_types` reconciled в предметных metadata без догадок по цвету или структуре repository.
+
+[Техническая история — automation#38](https://github.com/rosbiotech-studies/automation/pull/38) · [automation#39](https://github.com/rosbiotech-studies/automation/pull/39) · [automation#41](https://github.com/rosbiotech-studies/automation/pull/41) · automation#43
 
 ---
 
