@@ -8,6 +8,22 @@
 
 ---
 
+## 4 октября 2026
+
+### Расписание получило детерминированный GitHub transport
+
+После live burn-in расписание больше не зависит от способности конкретной AI-сессии напрямую обратиться к API РОСБИОТЕХ.
+
+В `automation` появился детерминированный resolver: он читает canonical название группы, получает актуальный `groupID` через `/api/Groups`, затем запрашивает `/api/Rasp` и fail-closed проверяет структуру и identity ответа. Реальный GitHub Actions smoke подтвердил цепочку `24о-090301-ИИ/1 → 18495 → 256 строк расписания`.
+
+Проверенный snapshot теперь материализуется по расписанию в derived-ветку `automation:schedule-cache`. ChatGPT и другие исполнители сначала используют свежий GitHub cache; direct HTTP остаётся fallback, а ручной JSON — последним аварийным вариантом. Provider-specific ID по-прежнему не является canonical metadata и не сохраняется в `current.yml`.
+
+Первоначальный cross-repository caller из публичного `.github` был отклонён burn-in тестом из-за visibility boundary GitHub Actions; production materialization поэтому полностью размещена внутри приватного `automation`.
+
+[Техническая история — automation#38](https://github.com/rosbiotech-studies/automation/pull/38) · [automation#39](https://github.com/rosbiotech-studies/automation/pull/39)
+
+---
+
 ## 3 октября 2026
 
 ### Расписание перестало зависеть от сохранённого groupID
