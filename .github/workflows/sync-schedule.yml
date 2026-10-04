@@ -1,0 +1,19 @@
+name: Синхронизация расписания
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - "current.yml"
+      - ".github/workflows/sync-schedule.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    uses: rosbiotech-studies/automation/.github/workflows/sync-academic-schedule.yml@v1
+    permissions:
+      contents: write
