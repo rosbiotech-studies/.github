@@ -45,9 +45,10 @@
 
 - [**МОиМС**](https://github.com/rosbiotech-studies/optimization-and-system-modeling)
 
+</details>
+
 ---
 
-</details>
 <!-- SUBJECTS:END -->
 
 ## Развитие организации
