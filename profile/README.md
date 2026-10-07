@@ -20,6 +20,8 @@
 - [**ПиАПП**](https://github.com/rosbiotech-studies/food-processes-and-apparatus)
 - [**Численные методы**](https://github.com/rosbiotech-studies/numerical-methods)
 
+---
+
 <details>
 <summary><strong>По семестрам</strong></summary>
 
