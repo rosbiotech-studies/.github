@@ -8,7 +8,7 @@
 ## Сейчас
 
 **3 курс · 5 семестр · 2026–2027**  
-Группа: `24о-090301-ИИ/1`
+Группа: 24о-090301-ИИ/1
 
 - [**БЖД**](https://github.com/rosbiotech-studies/bzhd)
 - [**Бизнес-планирование**](https://github.com/rosbiotech-studies/business-planning)
