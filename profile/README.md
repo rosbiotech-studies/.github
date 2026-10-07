@@ -23,6 +23,8 @@
 <details>
 <summary><strong>По семестрам</strong></summary>
 
+---
+
 ### 3 курс
 
 #### 5 семестр · 2026–2027 · текущий
@@ -40,6 +42,8 @@
 #### 6 семестр · 2026–2027
 
 - [**МОиМС**](https://github.com/rosbiotech-studies/optimization-and-system-modeling)
+
+---
 
 </details>
 <!-- SUBJECTS:END -->
