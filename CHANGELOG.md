@@ -8,6 +8,22 @@
 
 ---
 
+## 9 октября 2026
+
+### Устаревшие CI-проверки теперь можно безопасно обновлять автоматически
+
+В `automation@v1` внедрена **CI Revalidation** — отдельная GitHub-native maintenance capability для повторной проверки репозиториев после изменения stable delegated workflows или появления нового HEAD без актуального CI. Проверка запускается через `workflow_dispatch` на текущем HEAD, не создаёт фиктивных коммитов и не меняет учебное содержимое. Результат признаётся успешным только после локального CI с подтверждённой provenance стабильной версии `automation@v1` и повторного Organization Health.
+
+Новая GitHub App **ROSBIOTECH Studies CI Revalidation** использует отдельную минимальную область доступа к выбранным предметным репозиториям, `subject-template` и `inbox`. Health Check App остаётся read-only, доступ к исходникам не расширяется до записи.
+
+Правило onboarding новых дисциплин теперь учитывает оба допустимых представления области установки GitHub Apps — одиночный `repository_type` и множественный `repository_types`. При добавлении нового предметного репозитория Scheduled напомнит о ручном подключении **Source Mover** и **CI Revalidation**, если это требуется по актуальному реестру, а повторять уже обработанные напоминания не будет.
+
+Проведены пилотный и полный production burn-in: повторные CI на всех 9 предметных репозиториях, шаблоне и inbox завершились успешно без контентных коммитов. Финальный fresh Organization Health: **85 PASS, 0 WARN, 0 FAIL — healthy**.
+
+[Реализация — automation#54](https://github.com/rosbiotech-studies/automation/pull/54) · [Активация — automation#55](https://github.com/rosbiotech-studies/automation/pull/55)
+
+---
+
 ## 4 октября 2026
 
 ### Конспекты получили единый мягкий presentation guide
